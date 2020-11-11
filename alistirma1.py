@@ -1,7 +1,5 @@
 import random
 
-
-
 tahmin=input("Mastermind;\n*10 ile 98 arasında (10 ve 98 dahil),\n*Basamakları farklı\nbir sayı tutmuştur.\nMastermind'ın tuttuğu sayı için tahmininzi giriniz: ")
 
 sayi=random.randint(10,98)
