@@ -13,15 +13,15 @@ while True :
             print("Lütfen rakamları birbirinden farklı sayılar girin!")
             tahmin=input("Mastermind'ın tuttuğu sayı için tahmininzi giriniz: ")
         else :
-            if tahmin[0] ==(str(sayi))[0] and tahmin[1]==(str(sayi))[1]:
+            if tahmin[0] ==(str(sayi))[0] and tahmin[1]==(str(sayi))[1]: #Eğer 2 basamak da doğruysa doğru tahminde bulunulmuş demektir. Döngüden çıkabiliriz.
                 dogruyer += 2
                 print("Tebrikler, sayıyı doğru tahmin ettiniz!!!")
                 break
-            elif tahmin[0] ==(str(sayi))[0] or tahmin[1]==(str(sayi))[1]:
+            elif tahmin[0] ==(str(sayi))[0] or tahmin[1]==(str(sayi))[1]: #Basamaklardan sadece bir tanesinin doğru olma durumu
                 dogruyer += 1
-            elif tahmin[0]==(str(sayi))[1] and tahmin[1]==(str(sayi))[0]:
+            elif tahmin[0]==(str(sayi))[1] and tahmin[1]==(str(sayi))[0]: #Basamaklardan ikisinin de yanlış olma durumu
                 yanlisyer -= 2
-            elif tahmin[0]==(str(sayi))[1] or tahmin[1]==(str(sayi))[0]:
+            elif tahmin[0]==(str(sayi))[1] or tahmin[1]==(str(sayi))[0]: #Basamaklardan bir tanesinin yanlış olma durumu
                 yanlisyer -= 1
        
         print("Sizin tahmininiz: ",tahmin)
