@@ -1,6 +1,6 @@
 import random
 
-tahmin=input("Mastermind;\n*10 ile 98 arasında (10 ve 98 dahil),\n*Basamakları farklı\nbir sayı tutmuştur.\nMastermind'ın tuttuğu sayı için tahmininzi giriniz: ")
+tahmin=input("Mastermind;\n*10 ile 98 arasında (10 ve 98 dahil),\n*Rakamları farklı\nbir sayı tutmuştur.\nMastermind'ın tuttuğu sayı için tahmininzi giriniz: ")
 
 sayi=random.randint(10,98)
 
@@ -13,20 +13,20 @@ while True :
             print("Lütfen rakamları birbirinden farklı sayılar girin!")
             tahmin=input("Mastermind'ın tuttuğu sayı için tahmininzi giriniz: ")
         else :
-            if tahmin[0] ==(str(sayi))[0] and tahmin[1]==(str(sayi))[1]: #Eğer 2 basamak da doğruysa doğru tahminde bulunulmuş demektir. Döngüden çıkabiliriz.
+            if tahmin[0] ==(str(sayi))[0] and tahmin[1]==(str(sayi))[1]: #Eğer 2 basamak da tutulan sayıyla aynıysa doğru tahminde bulunulmuş demektir. Döngüden çıkabiliriz.
                 dogruyer += 2
                 print("Tebrikler, sayıyı doğru tahmin ettiniz!!!")
                 break
-            elif tahmin[0] ==(str(sayi))[0] or tahmin[1]==(str(sayi))[1]: #Basamaklardan sadece bir tanesinin doğru olma durumu
+            elif tahmin[0] ==(str(sayi))[0] or tahmin[1]==(str(sayi))[1]: #Basamaklardan sadece bir tanesinin tutulan sayıyla aynı olma durumu
                 dogruyer += 1
-            elif tahmin[0]==(str(sayi))[1] and tahmin[1]==(str(sayi))[0]: #Basamaklardan ikisinin de yanlış olma durumu
+            elif tahmin[0]==(str(sayi))[1] and tahmin[1]==(str(sayi))[0]: #Basamaklardan ikisinin de tutulan sayıyla aynı olmama durumu
                 yanlisyer -= 2
-            elif tahmin[0]==(str(sayi))[1] or tahmin[1]==(str(sayi))[0]: #Basamaklardan bir tanesinin yanlış olma durumu
+            elif tahmin[0]==(str(sayi))[1] or tahmin[1]==(str(sayi))[0]: #Basamaklardan bir tanesinin tutulan sayıyla aynı olmama durumu
                 yanlisyer -= 1
        
         print("Sizin tahmininiz: ",tahmin)
-        print("Doğru yer: " , dogruyer)
-        print("Yanlış yer: " , yanlisyer)
+        print("Doğru basamak: " , dogruyer)
+        print("Yanlış basamak: " , yanlisyer)
         tahmin=input("Mastermind'ın tuttuğu sayı için tahmininzi giriniz: ")
         
     else  :
