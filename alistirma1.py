@@ -32,5 +32,8 @@ while True :
     else  :
         print("Lütfen doğru aralıkta sayılar girin! ")
         tahmin=input("Mastermind'ın tuttuğu sayı için tahmininzi giriniz: ")
+        
+print("Mastermind'ın aklındaki sayı",sayi,"idi.")
+
 
 
