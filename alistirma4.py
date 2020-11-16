@@ -1,12 +1,6 @@
-#[0 1 1 2 3 5 8 13 ...]
+#[1 1 2 3 5 8 13 ...]
 
-fibo=[0,1]
-s=0 #s=sayaç
-
-while len(fibo)<30:
-    a=fibo[s]+fibo[s+1]
-    fibo.append(a)
-    s += 1
-
-print(*fibo,sep=" ")
-    
+def fibo(n):
+    if n==1 or n==2:
+        return 1
+    return fibo(n-2)+fibo(n-1)
